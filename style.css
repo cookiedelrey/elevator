@@ -1,0 +1,125 @@
+body {
+  font-family: sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.handle {
+  position: absolute;
+  width: 85px;
+  height: 350px;
+  border-radius: 15px;
+  left: 350px;
+  top: 15px;
+  bottom: 0;
+  padding: 0;
+  background: rgb(199, 194, 194);
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 350px;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  margin-top: 5px;
+}
+
+
+button.floor {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 2px solid lightgray;
+  display: block;
+  cursor: pointer;
+  font-size: 13px;
+  color: #3c3c3c;
+  font-family: sans-serif;
+}
+
+.building {
+  width: 280px;
+  position: relative;
+  background: #f3dcad;
+  height: 1200px;
+}
+.building:after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: gainsboro;
+  bottom: -20px;
+  width: 280px;
+  height: 20px;
+}
+.floors {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: stretch;
+  flex-direction: column-reverse;
+  background-color: antiquewhite;
+}
+
+.fl {
+  position: relative;
+  height: 100%;
+}
+.fl:after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  border-top: 2px solid rgb(238, 209, 185);
+  opacity: 0.8;
+}
+.floor-window {
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+}
+
+.floor-window:after,
+.floor-window:before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: lightskyblue;
+  border: 2px solid lightgrey;
+  width: 60px;
+  height: 73px;
+  margin-left: -20px;
+}
+.floor-window:after {
+  left: 72%;
+}
+.floor-window:before {
+  left: 20%;
+}
+.elevator-container {
+  position: absolute;
+  background-color: lightgray;
+  width: 80px;
+  left: 36%;
+  height: 100%;
+  z-index: 10;
+}
+
+.elevator {
+  width: 40px;
+  height: 60px;
+  margin-left: -20px;
+  margin-top: 7px;
+  top: 1125px;
+  left: 50%;
+  background: antiquewhite;
+  border: 3px solid rgb(165, 138, 115);
+  position: absolute;
+  transition: 3s;
+}
